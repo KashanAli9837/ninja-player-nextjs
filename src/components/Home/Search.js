@@ -78,7 +78,7 @@ const Search = ({ setLoading, postsRef, setPosts }) => {
             required
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="grow w-[60%] flex-1 md:w-auto text-lg md:text-sm"
+            className="grow w-[60%] flex-1 md:w-auto text-base md:text-sm"
             placeholder="Search"
           />
           <button

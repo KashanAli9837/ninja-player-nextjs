@@ -11,6 +11,7 @@ function UserInfo({ user }) {
           alt="user-image"
           width={40}
           height={40}
+          className={`${image && "rounded-full"}`}
         />
         <div>
           <h2 className="text-[14px] font-medium">

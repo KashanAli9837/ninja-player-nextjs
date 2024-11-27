@@ -81,7 +81,7 @@ function Form() {
               </svg>
               <span className="boxMessageContent pr-12">
                 Post created successfully! <br />
-                <Link href="/" className="underline underline-offset-2">Go To Homepage</Link>
+                <Link href="/" className="text-blue-600">Go To Homepage</Link>
               </span>
             </div>
           </div>
