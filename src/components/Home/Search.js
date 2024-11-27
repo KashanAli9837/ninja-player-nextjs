@@ -53,7 +53,7 @@ const Search = ({ setLoading, postsRef, setPosts }) => {
 
   return (
     <div className="mt-10">
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto justify-between">
         <label
           className="input input-bordered flex items-center gap-2 h-[3.5rem]
          bg-gray-50 pr-[5px]"
@@ -78,7 +78,7 @@ const Search = ({ setLoading, postsRef, setPosts }) => {
             required
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="grow text-sm"
+            className="grow w-[60%] flex-1 md:w-auto text-lg md:text-sm"
             placeholder="Search"
           />
           <button

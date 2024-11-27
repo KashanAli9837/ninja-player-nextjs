@@ -33,7 +33,7 @@ const Header = () => {
           </button>
         </Link>
         <Link href="/create-post" className="md:hidden">
-          <HiOutlinePencilSquare />
+          <HiOutlinePencilSquare className="w-5 h-5" />
         </Link>
         {session ? (
           <button
@@ -52,9 +52,9 @@ const Header = () => {
         )}
         <div className="md:hidden">
           {session ? (
-            <HiLogout onClick={() => signOut()} />
+            <HiLogout onClick={() => signOut()} className="w-5 h-5" />
           ) : (
-            <HiLogin onClick={() => signIn("google")} />
+            <HiLogin onClick={() => signIn("google")} className="w-5 h-5" />
           )}
         </div>
         {session && (
@@ -64,7 +64,7 @@ const Header = () => {
               alt="profile image"
               width={40}
               height={40}
-              className="lg:w-[50px] lg:h-[50px] cursor-pointer"
+              className={`lg:w-[50px] lg:h-[50px] cursor-pointer ${image && "rounded-full"}`}
             />
           </Link>
         )}

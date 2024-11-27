@@ -11,8 +11,8 @@ const PostItem = ({ post, modal = false, setPost, forProfile = false, handleDele
 
   return (
     <div
-      className="max-w-[350px] bg-white border border-gray-200 rounded-lg shadow
-     dark:bg-gray-800 dark:border-gray-700 w-full h-full flex flex-col"
+      className={`max-w-[350px] bg-white border border-gray-200 rounded-lg shadow
+     dark:bg-gray-800 dark:border-gray-700 w-full h-full flex flex-col ${modal || "max-w-[400px]"}`}
     >
       <Image
         className="rounded-t-lg w-full h-[180px] object-cover bg-[#F1F1FA]"
