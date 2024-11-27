@@ -32,7 +32,7 @@ const GameList = ({ setLoading, getPosts }) => {
           key={list.id}
           className="flex flex-col items-center cursor-pointer transition-all duration-150 hover:scale-[1.05]"
         >
-          <Image src={list.image} alt="game image" width={50} height={50} className="w-[35px] h-[35px] md:w-auto md:h-auto" />
+          <Image src={list.image} alt="game image" width={50} height={50} className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]" />
           <h2 className="text-xs md:text-sm text-center">{list.name}</h2>
         </div>
       ))}
