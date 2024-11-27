@@ -18,8 +18,9 @@ const PostItem = ({ post, modal = false, setPost, forProfile = false, handleDele
         className="rounded-t-lg w-full h-[180px] object-cover bg-[#F1F1FA]"
         src={post?.image || "/images/placeholder.jpg"}
         alt="banner"
-        width={100}
-        height={100}
+        width={200}
+        height={200}
+        quality={100}
         priority="true"
         onError={(e) => {
           e.target.src = "/images/placeholder.jpg";
