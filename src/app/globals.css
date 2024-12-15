@@ -8,9 +8,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background: white;
 }
 html , body{
     height: 100%;
     width: 100%;
+    background: white;
+    color: black;
 }
