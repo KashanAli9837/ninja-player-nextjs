@@ -36,7 +36,7 @@ const Home = () => {
   };
 
   return (
-    <div className="px-7 lg:px-10 mt-14">
+    <div className="px-7 lg:px-10 mt-14 bg-white">
       <Hero />
       <Search setLoading={setLoading} postsRef={postsRef} setPosts={setPosts} />
       <GameList setLoading={setLoading} getPosts={getPosts} />
