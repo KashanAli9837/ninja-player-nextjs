@@ -109,7 +109,7 @@ function Form() {
           return (
             <button
               onClick={() => handleOnClick()}
-              className={`btn w-full mb-4 ${
+              className={`btn w-full mb-4 bg-gray-100 border-none ${
                 inputs?.image && "btn-disabled"
               }`}
             >
@@ -130,11 +130,11 @@ function Form() {
           value={inputs?.title}
           onChange={handleChange}
           maxLength={30}
-          className="input input-bordered w-full"
+          className="input input-bordered w-full bg-gray-100"
         />
         <textarea
           name="desc"
-          className="w-full resize-none textarea textarea-bordered"
+          className="w-full resize-none textarea textarea-bordered bg-gray-100"
           required
           value={inputs?.desc}
           onChange={handleChange}
@@ -150,14 +150,14 @@ function Form() {
           value={inputs?.location}
           onChange={handleChange}
           maxLength={30}
-          className="input input-bordered w-full"
+          className="input input-bordered w-full bg-gray-100"
         />
         <select
           name="game"
           onChange={handleChange}
           required
           value={inputs?.game}
-          className="select select-bordered w-full"
+          className="select select-bordered w-full bg-gray-100"
         >
           <option disabled defaultValue={""}>
             Select Game
@@ -171,7 +171,7 @@ function Form() {
         <button
           type="submit"
           className={`btn bg-blue-500 w-full md:w-[30%] max-w-[150px] text-white
-             hover:bg-blue-600 rounded-full my-4 ${
+             hover:bg-blue-600 rounded-full border-none outline-none my-4 ${
                showLoader && "btn-disabled"
              }`}
         >

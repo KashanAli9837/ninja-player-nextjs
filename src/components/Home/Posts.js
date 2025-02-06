@@ -13,7 +13,7 @@ const Posts = ({ posts, forProfile, handleDelete }) => {
           no posts
         </p>
       ) : (
-        <div className="mt-14 pb-10 sm:px-5">
+        <div className="bg-white mt-14 pb-10 sm:px-5">
           <PostModal post={post} />
           <div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4

@@ -2,7 +2,7 @@ import Form from "@/components/Create-Post/Form";
 
 const CreatePost = () => {
   return (
-    <div className="flex justify-center">
+    <div className="bg-white flex justify-center">
       <div
         className="p-6 my-8 bg-white rounded-lg
        shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] w-[95%] lg:w-[35%] md:w-[60%] max-w-[500px]"
