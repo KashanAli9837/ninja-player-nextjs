@@ -3,7 +3,13 @@ import { HiOutlineCalendar, HiOutlineLocationMarker } from "react-icons/hi";
 import UserInfo from "./UserInfo";
 import Image from "next/image";
 
-const PostItem = ({ post, modal = false, setPost, forProfile = false, handleDelete = () => {} }) => {
+const PostItem = ({
+  post,
+  modal = false,
+  setPost,
+  forProfile = false,
+  handleDelete = () => {},
+}) => {
   const handleClick = (item) => {
     setPost(item);
     document.getElementById("my_modal_1").showModal();
@@ -11,8 +17,8 @@ const PostItem = ({ post, modal = false, setPost, forProfile = false, handleDele
 
   return (
     <div
-      className={`max-w-[350px] bg-white border border-gray-200 rounded-lg shadow
-     dark:bg-gray-800 dark:border-gray-700 w-full h-full flex flex-col ${modal && "max-w-[400px]"}`}
+      className={`max-w-[350px] bg-white border border-gray-300 rounded-lg shadow-xl
+      w-full h-full flex flex-col ${modal && "max-w-[400px]"}`}
     >
       <Image
         className="rounded-t-lg w-full h-[180px] object-cover bg-[#F1F1FA]"
@@ -27,7 +33,7 @@ const PostItem = ({ post, modal = false, setPost, forProfile = false, handleDele
         }}
       />
       <div className="p-6 flex flex-col flex-1">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
           {post?.title}
         </h5>
         <div className="flex items-center gap-2 mb-2 text-orange-500 text-xs justify-start">
@@ -38,22 +44,28 @@ const PostItem = ({ post, modal = false, setPost, forProfile = false, handleDele
           <HiOutlineLocationMarker size={"15px"} />
           {post?.location}
         </div>
-        <p className="mb-3 font-normal text-sm text-gray-700 dark:text-gray-400">
-          {!modal ? post?.desc : `${post?.desc?.length > 50 ? post?.desc.slice(0, 50) + "..." : post?.desc}`}
+        <p className="mb-3 font-normal text-sm text-gray-700">
+          {!modal
+            ? post?.desc
+            : `${
+                post?.desc?.length > 50
+                  ? post?.desc.slice(0, 50) + "..."
+                  : post?.desc
+              }`}
         </p>
         {modal ? (
           <div className="flex items-end flex-1">
             {forProfile ? (
               <a
                 onClick={() => handleDelete(post.id)}
-                className="button inline-flex items-center px-6 py-3 cursor-pointer text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 h-fit"
+                className="button inline-flex items-center px-6 py-3 cursor-pointer text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300  h-fit"
               >
                 Delete
               </a>
             ) : (
               <a
                 onClick={() => handleClick(post)}
-                className="button inline-flex items-center px-3 py-3 cursor-pointer text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-fit"
+                className="button inline-flex items-center px-3 py-3 cursor-pointer text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  h-fit"
               >
                 Read more
                 <svg
